@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b140f" />
+  <title>Evaluación de Intercambio Pedagógico 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <style>
+:root{color-scheme:dark;--g900:#0a3a22;--g800:#a8dcbc;--g700:#2f8a57;--g600:#2c7a4d;--g500:#3fae6c;--g100:#183223;--ink:#e1e9e4;--muted:#98ad9f;--line:#2f4439;--red:#e0786e;
+--metal:linear-gradient(165deg,#1f2e26 0%,#17251d 45%,#111d16 60%,#1b2a22 100%);
+--green-metal:linear-gradient(180deg,#228048 0%,#145c35 49%,#0d4a2b 51%,#15663a 100%);
+--silver:linear-gradient(180deg,#d3dbd6 0%,#aebab3 49%,#9aa89f 51%,#bcc7c0 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow','Segoe UI',system-ui,sans-serif;font-size:17px;line-height:1.5;color:var(--ink);min-height:100vh;background:repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0 1px,transparent 1px 4px),linear-gradient(180deg,#0f1c15,#0a130e);background-attachment:fixed}
+h1,h2,h3{font-family:'Rajdhani','Segoe UI',sans-serif}
+.container{max-width:940px;margin:0 auto;padding:22px 14px 30px}
+.hidden{display:none!important}
+:focus-visible{outline:3px solid var(--g500);outline-offset:2px}
+.topbar{position:relative;overflow:hidden;background:linear-gradient(180deg,#1a6a3e 0%,#0f4d2e 49%,#093a22 51%,#0e4a2b 100%);border-bottom:3px solid #86968d;box-shadow:0 12px 22px -12px rgba(0,0,0,.7)}
+.topbar::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.22) 50%,transparent 65%);transform:translateX(-110%);animation:sheen 1.7s .3s ease-out 1 forwards;pointer-events:none}
+@keyframes sheen{to{transform:translateX(110%)}}
+.topbar-in{max-width:940px;margin:0 auto;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:16px;color:#e8efea}
+.brand h1{font-size:1.55rem;font-weight:800;line-height:1.1;text-shadow:0 1px 0 rgba(0,0,0,.45)}
+.brand p{color:#b9d0c2;font-size:.98rem}
+.crest{width:58px;height:66px;flex:none;display:flex;align-items:center;justify-content:center;padding-bottom:10px;font-size:.72rem;font-weight:700;color:#0d2418;text-align:center;background:var(--silver);clip-path:polygon(0 0,100% 0,100% 58%,50% 100%,0 58%)}
+.crest img{width:100%;height:100%;object-fit:contain;display:block}
+.crest.has-img{background:none;clip-path:none;padding:0}
+.crest.lg{width:88px;height:100px;margin:0 auto;font-size:.85rem}
+.crest-ghost{display:none;position:absolute;right:-20px;bottom:-30px;width:280px;height:320px;opacity:.08;pointer-events:none;clip-path:none;background:none}
+.crest-ghost.has-img{display:block}
+.panel{position:relative;overflow:hidden;background:var(--metal);border:1px solid var(--line);border-radius:10px;padding:28px;margin-bottom:22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 14px 26px -16px rgba(0,0,0,.7)}
+.screen{animation:enter .3s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(6px)}}
+.title{font-size:1.75rem;font-weight:700;color:var(--g800);line-height:1.15;margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:22px;max-width:60ch}
+.login-grid{position:relative;display:grid;grid-template-columns:1.5fr 1fr;gap:34px}
+@media(max-width:760px){.login-grid{grid-template-columns:1fr;gap:20px}}
+.rules{border-left:3px solid var(--g700);padding-left:18px;align-self:start;margin-top:6px}
+.rules h3{font-size:1.25rem;color:var(--g800);margin-bottom:10px}
+.rules li{list-style:none;margin-bottom:10px}
+.field{margin-bottom:18px}
+label,.lbl{display:block;font-weight:700;color:var(--g800);margin-bottom:6px}
+.input-field,.select-field{width:100%;background:#0e1913;border:1.5px solid #3a5245;border-radius:6px;padding:11px 14px;font:inherit;color:var(--ink);outline:none;transition:border-color .15s,box-shadow .15s}
+.input-field::placeholder{color:#6f857a}
+.input-field:focus,.select-field:focus{border-color:var(--g500);box-shadow:0 0 0 3px rgba(63,174,108,.25)}
+.input-error{border-color:var(--red)!important}
+.pills{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:18px}
+@media(max-width:520px){.pills{grid-template-columns:repeat(3,1fr)}}
+.pill-btn{font:inherit;font-weight:700;padding:10px 4px;border:1.5px solid #3a5245;border-radius:6px;background:var(--metal);color:var(--ink);cursor:pointer;transition:transform .12s,border-color .12s}
+.pill-btn:hover{border-color:var(--g500);transform:translateY(-1px)}
+.pill-btn:active{transform:translateY(1px)}
+.pill-btn.active-course,.pill-btn.active-parallel{background:var(--green-metal);border-color:#3fae6c;color:#f0f5f2;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 6px 12px -6px rgba(0,0,0,.8)}
+.btn{font:inherit;font-weight:700;font-size:1.05rem;border:1px solid #3fae6c;border-radius:6px;padding:13px 22px;cursor:pointer;color:#f0f5f2;background:var(--green-metal);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 16px -10px rgba(0,0,0,.9);transition:transform .12s,filter .12s}
+.btn:hover{filter:brightness(1.12)}
+.btn:active{transform:translateY(1px)}
+.btn.block{width:100%}
+.btn-silver{color:#0d2418;border-color:#7d8d84;background:var(--silver);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 12px -10px rgba(0,0,0,.8);font-size:.98rem}
+.btn-ghost{background:transparent;color:#e8efea;border-color:rgba(232,239,234,.6);box-shadow:none;font-size:.95rem;padding:9px 16px}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.alert-banner{display:none;padding:11px 14px;border-radius:6px;font-weight:700;margin-bottom:14px}
+.alert-banner.error{display:block;background:#3a1714;border:1px solid #7d3a34;color:#f2b8b2}
+.alert-banner.success{display:block;background:#14301f;border:1px solid #2f6a47;color:#a8dcbc}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.exam-header{position:sticky;top:8px;z-index:50;background:rgba(15,26,20,.95);backdrop-filter:blur(10px);border:1px solid var(--line);border-top:3px solid var(--g700);border-radius:10px;padding:12px 16px 14px;margin-bottom:20px;box-shadow:0 12px 24px -14px rgba(0,0,0,.9)}
+.eh-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+#headerStudentName{font-family:'Rajdhani','Segoe UI',sans-serif;font-weight:700;font-size:1.25rem;color:var(--g800)}
+.tag{font-weight:700;font-size:.9rem;color:#a8dcbc;background:var(--g100);border:1px solid #2f6a47;border-radius:4px;padding:1px 9px;margin-left:10px}
+.muted{color:var(--muted);font-size:.92rem}
+.eh-prog{display:flex;align-items:center;gap:12px;margin:8px 0 10px}
+.eh-prog span{font-weight:700;color:var(--muted);white-space:nowrap}
+.progress-bar-bg{flex:1;height:10px;border-radius:99px;background:linear-gradient(180deg,#070d09,#16231c);box-shadow:inset 0 1px 3px rgba(0,0,0,.7);overflow:hidden}
+.progress-bar-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(180deg,#3fae6c 0%,#228048 49%,#17663a 51%,#2c9158 100%);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.qnav{display:flex;flex-wrap:wrap;gap:5px}
+.qnav button{font:inherit;font-weight:700;font-size:.85rem;width:30px;height:28px;border-radius:4px;border:1px solid #34493d;background:#0e1913;color:var(--muted);cursor:pointer;transition:background .25s,color .25s,transform .15s}
+.qnav button.done{background:var(--green-metal);border-color:#3fae6c;color:#f0f5f2}
+.qnav button.now{outline:2px solid #8fd1a8;outline-offset:1px;transform:translateY(-2px)}
+.question-card{display:grid;grid-template-columns:60px 1fr;background:var(--metal);border:1px solid var(--line);border-radius:10px;margin-bottom:16px;overflow:hidden;scroll-margin-top:170px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 10px 20px -14px rgba(0,0,0,.8);transition:border-color .25s}
+.q-rail{display:flex;justify-content:center;padding-top:16px;background:linear-gradient(180deg,#23352b,#18261f);border-right:1px solid var(--line);transition:background .3s}
+.q-rail span{font-family:'Rajdhani','Segoe UI',sans-serif;font-weight:800;font-size:1.7rem;line-height:1;color:var(--g800);transition:color .3s}
+.question-card.answered{border-color:#2f6a47}
+.question-card.answered .q-rail{background:var(--green-metal);border-right-color:#3fae6c}
+.question-card.answered .q-rail span{color:#f0f5f2}
+.q-body{padding:18px 20px}
+.q-title{font-family:'Barlow','Segoe UI',sans-serif;font-size:1.15rem;font-weight:500;line-height:1.4;margin-bottom:14px;color:#eaf0ec}
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:640px){.options-grid{grid-template-columns:1fr}.question-card{grid-template-columns:42px 1fr}.q-body{padding:14px}}
+.option-btn{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;color:var(--ink);background:#0f1b14;border:1.5px solid #34493d;border-radius:6px;padding:10px 12px;cursor:pointer;transition:border-color .15s,background .15s}
+.option-btn:hover{border-color:var(--g500);background:#14261c}
+.opt-letter{flex:none;width:26px;height:26px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;color:#0d2418;background:var(--silver);border:1px solid #7d8d84}
+.option-btn.selected{border-color:var(--g500);background:#173324;box-shadow:0 0 0 2px rgba(63,174,108,.3);animation:pick .22s ease}
+.option-btn.selected .opt-letter{background:var(--green-metal);color:#f0f5f2;border-color:#3fae6c}
+@keyframes pick{50%{transform:scale(.985)}}
+.score-banner{text-align:center;padding:24px 18px;border-radius:8px;margin-bottom:18px;color:#e8efea;background:linear-gradient(180deg,#1a6a3e 0%,#0f4d2e 49%,#093a22 51%,#0e4a2b 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.score-banner h2{font-size:1.7rem;font-weight:800}
+.score-banner p{color:#b9d0c2}
+.score-circle{--p:0%;width:150px;height:150px;border-radius:50%;margin:16px auto;display:flex;align-items:center;justify-content:center;background:conic-gradient(#d3dbd6 var(--p),rgba(255,255,255,.16) 0);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.score-inner{width:122px;height:122px;border-radius:50%;background:linear-gradient(165deg,#1f2e26,#101a14);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--g800)}
+.score-big{font-family:'Rajdhani','Segoe UI',sans-serif;font-size:2.9rem;font-weight:800;line-height:1}
+.score-max{font-size:.9rem;color:var(--muted)}
+.stats-row{display:flex;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.stat-box{padding:2px 24px;text-align:center}
+.stat-box+.stat-box{border-left:1px solid rgba(255,255,255,.25)}
+.stat-box small{display:block;color:#b9d0c2}
+.stat-box strong{font-size:1.1rem}
+.sync-status{display:none;margin:0 0 16px;padding:10px 14px;border-radius:6px;font-weight:700}
+.action-buttons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.reset-auth-box{margin-top:16px;padding:16px;border-radius:8px;background:#0f1b14;border:1.5px solid #3a5245}
+.reset-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.reset-row .input-field{flex:1;min-width:200px;width:auto}
+.review-item{padding:14px 18px;margin-bottom:10px;background:#0f1b14;border:1px solid var(--line);border-left:5px solid var(--g500);border-radius:6px}
+.review-item.wrong{border-left-color:#d0554a;background:#221413}
+.status-chip{display:block;font-weight:800;font-size:.9rem;margin-bottom:3px}
+.status-chip.ok{color:#7fd1a0}.status-chip.fail{color:#f0958c}
+.rv-q{font-weight:700;margin-bottom:4px}.rv-a{color:var(--muted)}.rv-c{color:var(--g800);font-weight:700;margin-top:2px}
+pre.code-box{background:#070d09;color:#bfe0cc;border:1px solid var(--line);border-radius:6px;padding:14px;font:.82rem Consolas,monospace;overflow-x:auto;white-space:pre-wrap;margin:12px 0}
+summary{cursor:pointer;color:var(--g800);font-weight:700}
+.foot{text-align:center;color:var(--muted);font-size:.92rem;padding:4px 0 26px}
+
+.topbar::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 22px),linear-gradient(90deg,transparent,rgba(143,209,168,.95),transparent);background-size:auto,auto,30% 2px;background-repeat:repeat,repeat,no-repeat;background-position:0 0,0 0,-40% 100%;animation:scan 5s linear infinite}
+@keyframes scan{to{background-position:0 0,0 0,140% 100%}}
+.topbar-in{position:relative;padding:18px 14px}
+.brand{gap:22px}
+.brand h1{font-size:1.95rem;letter-spacing:.02em}
+.brand p{font-size:1.02rem}
+.crest-fx{position:relative;width:140px;height:140px;flex:none;display:grid;place-items:center;perspective:520px}
+.crest-fx::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(transparent 0 55%,#8fd1a8 78%,#eef3f0 92%,transparent);-webkit-mask:radial-gradient(closest-side,transparent 94%,#000 95% 99%,transparent 100%);mask:radial-gradient(closest-side,transparent 94%,#000 95% 99%,transparent 100%);animation:spin 6s linear infinite}
+.crest-fx::after{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(214,226,219,.3);box-shadow:0 0 30px rgba(63,174,108,.35),inset 0 0 24px rgba(63,174,108,.18);animation:pulse 4s ease-in-out infinite}
+.crest-fx .crest{position:relative;z-index:1;margin:0;width:90px;height:102px;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out;filter:drop-shadow(0 8px 12px rgba(0,0,0,.55))}
+.crest-fx.lg{width:170px;height:170px;margin:0 auto}
+.crest-fx.lg .crest{width:108px;height:122px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{opacity:.5}}
+@media(max-width:560px){.crest-fx{width:104px;height:104px}.crest-fx .crest{width:66px;height:76px}.brand h1{font-size:1.5rem}}
+.crest-ghost{width:360px;height:400px;opacity:.09}
+.panel::before,.panel::after{content:"";position:absolute;width:16px;height:16px;pointer-events:none;opacity:.75}
+.panel::before{top:8px;left:8px;border-top:2px solid var(--g500);border-left:2px solid var(--g500)}
+.panel::after{bottom:8px;right:8px;border-bottom:2px solid var(--g500);border-right:2px solid var(--g500)}
+
+.pills.p4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:520px){.pills.p4{grid-template-columns:repeat(2,1fr)}}
+.q-fig{display:flex;justify-content:center;margin:2px 0 16px;padding:14px;background:#0b140f;border:1px solid var(--line);border-radius:8px}
+.q-fig svg{width:100%;max-width:360px;height:auto}
+.opt-fig{display:block;margin-bottom:6px}
+.opt-fig svg{display:block;width:100%;max-width:170px;height:auto}
+
+.eh-right{display:flex;align-items:center;gap:12px}
+.timer{font-family:'Rajdhani','Segoe UI',sans-serif;font-weight:700;font-size:1.5rem;line-height:1;min-width:5.4rem;text-align:center;padding:4px 10px;border-radius:6px;color:#cfe3d7;background:#0b140f;border:1px solid var(--line);transition:color .3s,border-color .3s}
+.timer.low{color:#f0dc8a;border-color:#7a6a2a}
+.timer.crit{color:#f2b8b2;border-color:#7d3a34;animation:tpulse 1s ease-in-out infinite}
+@keyframes tpulse{50%{opacity:.55}}
+.btn:disabled{opacity:.55;cursor:not-allowed;filter:grayscale(.35)}
+.btn:disabled:hover{filter:grayscale(.35)}
+.score-big.espera{font-size:2.1rem}
+
+.pills.p2{grid-template-columns:repeat(2,1fr)}
+.q-expr{font-family:'Rajdhani','Segoe UI',sans-serif;font-size:1.6rem;font-weight:600;color:#cfe3d7;margin:-4px 0 16px;padding:12px 16px;background:#0b140f;border:1px solid var(--line);border-radius:8px;overflow-x:auto;white-space:nowrap}
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .18em;font-size:.88em;line-height:1.15}
+.frac>span:first-child{border-bottom:1.5px solid currentColor;padding:0 .25em}
+.frac>span+span{padding:0 .25em}
+.rad{white-space:nowrap}
+.rad>span{border-top:1.5px solid currentColor;padding:0 .12em;margin-left:.04em}
+.question-card{animation:rise .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.option-btn.selected .opt-letter{animation:stamp .3s ease}
+@keyframes stamp{40%{transform:scale(1.35) rotate(-6deg)}}
+.auto{display:flex;align-items:center;gap:6px;font-size:.9rem;color:var(--muted);cursor:pointer;user-select:none}
+.auto input{accent-color:#3fae6c;width:16px;height:16px}
+.countdown{position:fixed;inset:0;z-index:300;display:grid;place-items:center;text-align:center;background:rgba(8,16,11,.93);backdrop-filter:blur(8px)}
+.cd-num{display:block;font-family:'Rajdhani','Segoe UI',sans-serif;font-weight:700;font-size:min(34vw,12rem);line-height:1;background:linear-gradient(180deg,#e9f1ec 0%,#8fd1a8 50%,#2c7a4d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cd-num.pop{animation:cdpop .8s cubic-bezier(.2,.9,.3,1) both}
+@keyframes cdpop{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1.12)}100%{opacity:.9;transform:scale(1)}}
+.countdown p{color:#cfe3d7;font-size:1.25rem;margin-top:8px;padding:0 20px}
+.toast{position:fixed;left:50%;bottom:22px;z-index:150;transform:translate(-50%,24px);opacity:0;pointer-events:none;background:linear-gradient(180deg,#1f2e26,#111d16);border:1px solid #3fae6c;color:#e1e9e4;padding:10px 20px;border-radius:8px;font-weight:600;box-shadow:0 12px 28px -10px rgba(0,0,0,.9);transition:opacity .35s,transform .35s;max-width:92vw;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.nivel{margin-top:12px;font-family:'Rajdhani','Segoe UI',sans-serif;font-size:1.35rem;font-weight:700;color:#e9f1ec;letter-spacing:.02em;min-height:1.4em}
+.nivel.in,.tip.in{animation:fadein .7s ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}}
+.tip{margin:10px auto 0;max-width:560px;text-align:center;color:var(--muted);font-style:italic;min-height:3em}
+.fx{position:fixed;inset:0;z-index:200;pointer-events:none;display:none}
+.fx.on{display:block}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+  <div class="brand">
+    <!-- ESCUDO 1: encabezado. Se llena solo con ESCUDO_URL (arriba en el script). -->
+    <div class="crest-fx"><div class="crest" data-crest>Escudo</div></div>
+    <div>
+      <h1 data-school>Unidad Educativa Gran Mariscal de Ayacucho</h1>
+      <p>Evaluación de Intercambio Pedagógico 2026. Dirección Distrital de Educación Huanuni. 1ro y 2do de Secundaria</p>
+    </div>
+  </div>
+  <button type="button" class="btn btn-ghost" onclick="toggleAdminAuth()">Panel docente</button>
+</div></header>
+
+<div class="container">
+  <section id="adminAuthBox" class="panel hidden">
+    <h2 class="title">Acceso docente</h2>
+    <p class="sub">Ingresa la clave docente para configurar Google Sheets o descargar el respaldo CSV.</p>
+    <div id="adminAuthNotice" class="alert-banner"></div>
+    <div class="reset-row">
+      <input type="password" id="adminPassInput" class="input-field" style="flex:1;width:auto" placeholder="Escribe la clave docente" onkeydown="if(event.key==='Enter') verifyAdminPass()" />
+      <button type="button" class="btn btn-silver" onclick="verifyAdminPass()">Desbloquear panel</button>
+    </div>
+  </section>
+
+  <section id="adminPanel" class="panel hidden">
+    <h2 class="title">Conexión con Google Sheets</h2>
+    <p class="sub">El enlace de Google Apps Script ya está integrado. Puedes actualizarlo, consultar la tabla de puntos o descargar el respaldo local.</p>
+    <div id="adminNotice" class="alert-banner"></div>
+    <div class="field">
+      <label for="scriptUrlInput">URL activa de Google Apps Script (termina en /exec)</label>
+      <input type="url" id="scriptUrlInput" class="input-field" placeholder="https://script.google.com/macros/s/AKfycb.../exec" />
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-silver" onclick="saveScriptUrl()">Guardar URL</button>
+      <button type="button" class="btn btn-silver" onclick="openResultsPage()">Ver tabla de puntos</button>
+      <button type="button" class="btn btn-silver" onclick="copyAppsScriptCode()">Copiar código para Apps Script</button>
+      <button type="button" class="btn btn-silver" onclick="exportLocalBackupCSV()">Descargar respaldo local (CSV)</button>
+      <button type="button" class="btn btn-silver" onclick="forceUnlockFromAdmin()">Desbloquear examen en este dispositivo</button>
+    </div>
+    <div class="field">
+      <label for="crestFile">Escudo del colegio (PNG)</label>
+      <input type="file" id="crestFile" accept="image/png" class="input-field" onchange="loadCrestFile(this)" />
+      <p class="muted" style="margin-top:6px">Se guarda en este dispositivo. Para dejarlo fijo en todos, sube el archivo escudo.png junto a index.html.</p>
+    </div>
+    <details>
+      <summary>Ver código Google Apps Script (pegar en Extensiones &gt; Apps Script)</summary>
+      <pre id="appsScriptCode" class="code-box">/**
+ * EVALUACIÓN DE INTERCAMBIO PEDAGÓGICO 2026 (sobre 45 puntos)
+ * Guarda cada nota en la hoja "Resultados" y muestra la tabla de puntos.
+ * Úsalo en un Google Sheet NUEVO, aparte del de Lengua.
+ *
+ * Implementar: Implementar &gt; Nueva implementación &gt; Aplicación web
+ *   Ejecutar como: Yo   |   Quién tiene acceso: Cualquier persona
+ */
+var NOMBRE_HOJA = "Resultados";
+var CLAVE_DOCENTE = "ayacucho2026irra"; // clave para ver la tabla de puntos (cámbiala si quieres)
+var ENCABEZADOS = ["FECHA Y HORA", "NOMBRES Y APELLIDOS", "CURSO", "PARALELO", "CURSO COMPLETO",
+                   "ÁREA", "PUNTAJE (SOBRE 45)", "ACIERTOS (DE 9)", "PREGUNTAS FALLADAS", "DETALLE DE RESPUESTAS"];
+
+function hoja_() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(NOMBRE_HOJA);
+  if (!sh) {
+    sh = ss.insertSheet(NOMBRE_HOJA);
+    sh.appendRow(ENCABEZADOS);
+    sh.setFrozenRows(1);
+    sh.getRange(1, 1, 1, ENCABEZADOS.length).setFontWeight("bold").setBackground("#0f4d2e").setFontColor("#ffffff");
+    sh.getRange("A:A").setNumberFormat("@");
+  }
+  return sh;
+}
+
+function json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+// Recibe la nota desde el examen (sin duplicados si el estudiante reenvía)
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var d = JSON.parse(e.postData.contents);
+    var sh = hoja_();
+    var fecha = d.fechaHora || new Date().toLocaleString("es-BO");
+    var nombre = d.nombre || "";
+    var v = sh.getDataRange().getValues();
+    for (var i = 1; i &lt; v.length; i++) {
+      if (String(v[i][0]) === String(fecha) &amp;&amp; String(v[i][1]) === nombre) return json_({ status: "duplicado" });
+    }
+    sh.appendRow([fecha, nombre, d.curso || "", d.paralelo || "", d.cursoCompleto || "",
+                  d.area || "Intercambio Pedagógico", Number(d.puntaje) || 0, d.aciertosTexto || "", d.preguntasFalladas || "", d.detalleRespuestas || ""]);
+    return json_({ status: "ok" });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function datos_() {
+  var v = hoja_().getDataRange().getValues();
+  v.shift();
+  return v.filter(function (r) { return r[1]; }).map(function (r) {
+    return { fecha: String(r[0]), nombre: String(r[1]), curso: String(r[4]),
+             puntaje: Number(r[6]) || 0, aciertos: String(r[7]) };
+  });
+}
+
+// Tabla de puntos: abre la URL de la aplicación web
+function doGet(e) {
+  var p = (e &amp;&amp; e.parameter) || {};
+  if (p.clave !== CLAVE_DOCENTE) return pagina_(formulario_());
+  if (p.formato === "json") return json_(datos_());
+  return pagina_(tabla_(datos_()));
+}
+
+var CSS = "*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,system-ui,sans-serif;color:#e1e9e4;background:linear-gradient(180deg,#0f1c15,#0a130e);min-height:100vh}" +
+  "main{max-width:980px;margin:0 auto;padding:24px 14px}h1{margin:0 0 4px;color:#a8dcbc;font-size:1.7rem}" +
+  ".bar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}input,select{background:#0e1913;color:#e1e9e4;border:1.5px solid #3a5245;border-radius:6px;padding:10px 12px;font:inherit}" +
+  "input{flex:1;min-width:200px}.st{color:#98ad9f;margin-bottom:10px}table{width:100%;border-collapse:collapse;background:#111d16;border:1px solid #2f4439}" +
+  "th{background:linear-gradient(180deg,#1a6a3e,#0d4a2b);text-align:left;padding:10px;font-size:.9rem}td{padding:9px 10px;border-top:1px solid #22332a;font-size:.95rem}" +
+  "td.pt{font-weight:800;color:#8fd1a8;font-size:1.1rem}tr:hover td{background:#16271e}.wrap{overflow-x:auto}" +
+  "button{background:linear-gradient(180deg,#228048,#0d4a2b);color:#f0f5f2;border:1px solid #3fae6c;border-radius:6px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}";
+
+function pagina_(cuerpo) {
+  var html = '&lt;!DOCTYPE html&gt;&lt;html lang="es"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;title&gt;Resultados de Intercambio Pedagógico&lt;/title&gt;&lt;style&gt;' + CSS +
+             '&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;main&gt;' + cuerpo + '&lt;/main&gt;&lt;/body&gt;&lt;/html&gt;';
+  return HtmlService.createHtmlOutput(html).setTitle("Resultados de Intercambio Pedagógico")
+    .addMetaTag("viewport", "width=device-width, initial-scale=1");
+}
+
+function formulario_() {
+  return '&lt;h1&gt;Resultados de Intercambio Pedagógico&lt;/h1&gt;&lt;p style="color:#98ad9f"&gt;Ingresa la clave docente para ver los puntos.&lt;/p&gt;' +
+    '&lt;form method="get" target="_top" action="' + ScriptApp.getService().getUrl() + '" class="bar"&gt;' +
+    '&lt;input type="password" name="clave" placeholder="Clave docente" autofocus&gt;&lt;button type="submit"&gt;Ver puntos&lt;/button&gt;&lt;/form&gt;';
+}
+
+function pagina_(cuerpo) {
+  var html = '&lt;!DOCTYPE html&gt;&lt;html lang="es"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;title&gt;Resultados de Intercambio Pedagógico&lt;/title&gt;&lt;style&gt;' + CSS +
+             '&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;main&gt;' + cuerpo + '&lt;/main&gt;&lt;/body&gt;&lt;/html&gt;';
+  return HtmlService.createHtmlOutput(html).setTitle("Resultados de Intercambio Pedagógico")
+    .addMetaTag("viewport", "width=device-width, initial-scale=1");
+}
+
+function formulario_() {
+  return '&lt;h1&gt;Resultados de Intercambio Pedagógico&lt;/h1&gt;&lt;p style="color:#98ad9f"&gt;Ingresa la clave docente para ver los puntos.&lt;/p&gt;' +
+    '&lt;form method="get" target="_top" action="' + ScriptApp.getService().getUrl() + '" class="bar"&gt;' +
+    '&lt;input type="password" name="clave" placeholder="Clave docente" autofocus&gt;&lt;button type="submit"&gt;Ver puntos&lt;/button&gt;&lt;/form&gt;';
+}
+
+var CLIENTE = `
+(function(){
+  var f=document.getElementById('f'),q=document.getElementById('q'),tb=document.getElementById('tb'),st=document.getElementById('st');
+  var cursos=[];D.forEach(function(r){if(cursos.indexOf(r.curso)&lt;0)cursos.push(r.curso)});cursos.sort();
+  cursos.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;f.appendChild(o)});
+  function esc(s){return String(s).replace(/[&amp;&lt;&gt;"]/g,function(c){return {'&amp;':'&amp;amp;','&lt;':'&amp;lt;','&gt;':'&amp;gt;','"':'&amp;quot;'}[c]})}
+  function pintar(){
+    var t=q.value.toLowerCase(),c=f.value;
+    var L=D.filter(function(r){return (!c||r.curso===c)&amp;&amp;(!t||r.nombre.toLowerCase().indexOf(t)&gt;=0)})
+           .sort(function(a,b){return b.puntaje-a.puntaje});
+    var suma=0;L.forEach(function(r){suma+=r.puntaje});
+    st.textContent=L.length+' estudiantes. Promedio: '+(L.length?(suma/L.length).toFixed(1):0)+' de 45';
+    tb.innerHTML=L.map(function(r,i){return '&lt;tr&gt;&lt;td&gt;'+(i+1)+'&lt;/td&gt;&lt;td&gt;'+esc(r.nombre)+'&lt;/td&gt;&lt;td&gt;'+esc(r.curso)+
+      '&lt;/td&gt;&lt;td class="pt"&gt;'+r.puntaje+'&lt;/td&gt;&lt;td&gt;'+esc(r.aciertos)+'&lt;/td&gt;&lt;td&gt;'+esc(r.fecha)+'&lt;/td&gt;&lt;/tr&gt;'}).join('');
+  }
+  f.onchange=pintar;q.oninput=pintar;pintar();
+})();`;
+
+function tabla_(filas) {
+  return '&lt;h1&gt;Resultados de Intercambio Pedagógico&lt;/h1&gt;' +
+    '&lt;div class="bar"&gt;&lt;select id="f"&gt;&lt;option value=""&gt;Todos los cursos&lt;/option&gt;&lt;/select&gt;' +
+    '&lt;input id="q" placeholder="Buscar estudiante"&gt;&lt;/div&gt;&lt;div id="st" class="st"&gt;&lt;/div&gt;' +
+    '&lt;div class="wrap"&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Estudiante&lt;/th&gt;&lt;th&gt;Curso&lt;/th&gt;&lt;th&gt;Puntos&lt;/th&gt;&lt;th&gt;Aciertos&lt;/th&gt;&lt;th&gt;Fecha&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;' +
+    '&lt;tbody id="tb"&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;' +
+    '&lt;script&gt;var D=' + JSON.stringify(filas).replace(/&lt;/g, "\\u003c") + ';' + CLIENTE + '&lt;/script&gt;';
+}
+</pre>
+    </details>
+  </section>
+
+  <section id="loginScreen" class="panel screen">
+    <!-- ESCUDO 2: marca de agua grande detrás del registro (solo aparece si hay imagen). -->
+    <div class="crest crest-ghost" data-crest></div>
+    <div class="login-grid">
+      <div>
+        <h2 class="title">Registro del estudiante</h2>
+        <p class="sub">Escribe tu nombre completo y elige tu curso y paralelo para habilitar la evaluación.</p>
+        <div class="field">
+          <label for="studentName">Nombres y apellidos completos</label>
+          <input type="text" id="studentName" class="input-field" placeholder="Ej. Juan Carlos Mamani Quispe" autocomplete="name" />
+        </div>
+        <span class="lbl">Curso</span>
+        <div class="pills p2">
+          <button type="button" class="pill-btn" id="btnCourse-1ro" onclick="selectCourse('1ro')">1ro Sec.</button>
+          <button type="button" class="pill-btn" id="btnCourse-2do" onclick="selectCourse('2do')">2do Sec.</button>
+        </div>
+        <span class="lbl">Paralelo</span>
+        <div class="pills">
+          <button type="button" class="pill-btn" id="btnPar-A" onclick="selectParallel('A')">A</button>
+          <button type="button" class="pill-btn" id="btnPar-B" onclick="selectParallel('B')">B</button>
+          <button type="button" class="pill-btn" id="btnPar-C" onclick="selectParallel('C')">C</button>
+          <button type="button" class="pill-btn" id="btnPar-D" onclick="selectParallel('D')">D</button>
+          <button type="button" class="pill-btn" id="btnPar-E" onclick="selectParallel('E')">E</button>
+          <button type="button" class="pill-btn" id="btnPar-F" onclick="selectParallel('F')">F</button>
+        </div>
+        <div class="hidden" aria-hidden="true">
+          <input type="text" id="courseInput" class="input-field" oninput="handleCourseText(this.value)" />
+          <select id="parallelSelect" class="select-field" onchange="selectParallel(this.value)">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div id="loginErrorBox" class="alert-banner"></div>
+        <button type="button" class="btn block" onclick="startExam()">Iniciar evaluación</button>
+      </div>
+      <aside class="rules">
+        <h3>Antes de empezar</h3>
+        <ul>
+          <li>La evaluación tiene 9 preguntas de opción múltiple.</li>
+          <li>Cada respuesta correcta vale 5 puntos. El total es de 45 puntos.</li>
+          <li>Tienes 40 minutos desde que pulsas Iniciar evaluación. Al terminar el tiempo, tus respuestas se envían solas.</li>
+          <li>Tienes un solo intento en este dispositivo.</li>
+          <li>Al finalizar no se muestra la nota. Tu puntaje y el reporte en PDF se habilitan 10 minutos después.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="examScreen" class="screen hidden">
+    <div class="exam-header">
+      <div class="eh-top">
+        <div><span id="headerStudentName"></span><span id="headerCourseBadge" class="tag"></span></div>
+        <div class="eh-right"><span class="muted">5 puntos cada una, total 45</span><label class="auto"><input type="checkbox" id="autoAvance" checked><span>Avance automático</span></label><span id="examTimer" class="timer">40:00</span></div>
+      </div>
+      <div class="eh-prog"><span id="progressCounter">0 / 9</span><div class="progress-bar-bg"><div id="progressBarFill" class="progress-bar-fill"></div></div></div>
+      <div id="qNav" class="qnav" aria-label="Ir a una pregunta"></div>
+    </div>
+    <div id="questionsContainer"></div>
+    <div class="panel" style="text-align:center">
+      <div id="examWarningBox" class="alert-banner"></div>
+      <p class="muted" style="margin-bottom:14px">Verifica haber respondido las 9 preguntas antes de finalizar. Al enviar tu nota se registrará en Google Sheets.</p>
+      <button type="button" id="btnSubmitExam" class="btn block" onclick="submitExam(false)">Finalizar evaluación y enviar puntaje</button>
+    </div>
+  </section>
+
+  <section id="resultScreen" class="panel screen hidden">
+    <div class="score-banner">
+      <!-- ESCUDO 3: pantalla de resultados. -->
+      <div class="crest-fx lg"><div class="crest lg" data-crest>Escudo</div></div>
+      <div id="scoreCircle" class="score-circle"><div class="score-inner"><span id="finalScoreValue" class="score-big">0</span><span id="scoreMax" class="score-max">de 45 puntos</span></div></div>
+      <h2 id="resultStudentTitle"></h2>
+      <p id="resultMetaInfo"></p>
+      <p id="nivel" class="nivel"></p>
+      <div class="stats-row">
+        <div class="stat-box"><small>Emitido</small><strong id="statTimestamp">--</strong></div>
+      </div>
+    </div>
+    <div id="syncNotification" class="sync-status"></div>
+    <div class="action-buttons-grid">
+      <button type="button" id="btnPdf" class="btn" onclick="generateStudentPDF()">Descargar reporte PDF</button>
+      <button type="button" class="btn btn-silver" onclick="retrySendToGoogleSheets()">Reenviar nota a Google Sheets</button>
+      <button type="button" class="btn btn-silver" onclick="toggleResetPasswordBox()">Reiniciar / Nueva Evaluación (Con Clave)</button>
+    </div>
+    <p id="pdfNota" class="muted" style="margin-top:12px"></p>
+    <p id="pdfTip" class="tip"></p>
+    <div id="resetPasswordBox" class="reset-auth-box hidden">
+      <strong style="color:var(--g800)">Reinicio protegido, solo docente</strong>
+      <p class="muted" style="margin-top:4px">El estudiante tiene 1 intento. Ingresa la clave de reinicio para habilitar un nuevo examen en este dispositivo.</p>
+      <div id="resetErrorBanner" class="alert-banner" style="margin-top:10px"></div>
+      <div class="reset-row">
+        <input type="password" id="resetPassInput" class="input-field" placeholder="Clave de reinicio" onkeydown="if(event.key==='Enter') confirmResetWithPassword()" />
+        <button type="button" class="btn btn-silver" onclick="confirmResetWithPassword()">Habilitar nuevo examen</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="countdown" class="countdown hidden" aria-live="assertive"><div><span id="cdNum" class="cd-num">3</span><p id="cdMsg"></p></div></div>
+<div id="toast" class="toast" role="status"></div>
+<canvas id="fx" class="fx" aria-hidden="true"></canvas>
+<script>
+  // =========================================================================
+  // 1. URL DE TU GOOGLE APPS SCRIPT YA INTEGRADA Y CLAVE DE REINICIO:
+  // =========================================================================
+  // ESCUDO DEL COLEGIO: ruta de la imagen (ej. "escudo.png" en la misma carpeta que este archivo) o una imagen en base64.
+  // Si el archivo no existe, se muestra el marco vacío del escudo.
+  let ESCUDO_URL = "escudo.png"; // imagen en la misma carpeta que este archivo
+  const ESCUDO_RESPALDO = "https://raw.githubusercontent.com/Rootphanton/evaluacion-mate-3a6/main/escudo.png"; // si la anterior no carga
+  const N_PREG = 9, PTS = 5, TOTAL = 45; // 9 preguntas x 5 puntos = 45
+  const TIEMPO_MIN = 40, ESPERA_PDF_MIN = 10; // minutos para responder y de espera para la nota y el PDF
+  const SESION_KEY = "examen_sesion_ip", LOCK_KEY = "examen_bloqueado_ip_2026";
+  let sesionActual = null, tiempoAgotado = false, examTimerId = null, pdfTimerId = null;
+  const NOMBRE_COLEGIO = "Unidad Educativa Gran Mariscal de Ayacucho";
+
+  const DEFAULT_GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwsB9FPgIFJu-g5o9Wc3fFz00dfkLEDX8IOqum6W7bljD3IiioRv_t5YgLR_ALqNcAZsg/exec"; // Google Apps Script del Intercambio Pedagógico
+  
+  // Claves válidas para reiniciar el examen o abrir el panel docente:
+  const VALID_RESET_KEYS = ["ayacucho2026irra"];
+
+  // =========================================================================
+  // 2. BASE DE DATOS OFICIAL INTEGRADA (1RO A 6TO DE SECUNDARIA - 90 PREGUNTAS)
+  // =========================================================================
+  const EXAM_DATABASE = {
+ "1ro": [
+  {
+   "q": "Resolver la siguiente operación combinada con números enteros, aplicando la jerarquía y orden de resolución de las operaciones aritméticas:",
+   "expr": "(3 ⋅ 4 − 10)² + 6 ⋅ (12 ÷ 4 − 5 + 3)² + 12 ÷ (20 ÷ 5) − √[81] =",
+   "options": {
+    "a": "4",
+    "b": "1",
+    "c": "0",
+    "d": "−1"
+   },
+   "ans": "a"
+  },
+  {
+   "q": "Hallar el valor de x en la siguiente figura, aplicando las propiedades de los ángulos:",
+   "fig": "<svg viewBox=\"0 0 270 190\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Ángulo recto dividido en dos ángulos: 30° y 2x + 20°\"><g fill=\"none\" stroke=\"#cfe3d7\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M40 175 V20\"/><path d=\"M40 175 H250\"/><path d=\"M40 175 L217.5 72.5\"/></g><g fill=\"none\" stroke=\"#8fd1a8\" stroke-width=\"2\"><path d=\"M110 175 A70 70 0 0 0 100.6 140\"/><path d=\"M87.6 147.5 A55 55 0 0 0 40 120\"/><path d=\"M40 161 H54 V175\"/></g><g font-family=\"Barlow,Segoe UI,sans-serif\" font-weight=\"600\" font-size=\"17\" fill=\"#e1e9e4\"><text x=\"128\" y=\"164\">30°</text><text x=\"62\" y=\"104\">2x + 20°</text></g></svg>",
+   "options": {
+    "a": "30°",
+    "b": "20°",
+    "c": "10°",
+    "d": "90°"
+   },
+   "ans": "b"
+  },
+  {
+   "q": "Resolver el siguiente ejercicio con números racionales aplicando la regla de signos:",
+   "expr": "{3/10} + {2/10} + {2/10} =",
+   "options": {
+    "a": "{7/30}",
+    "b": "{7/10}",
+    "c": "{5/10}",
+    "d": "{1/5}"
+   },
+   "ans": "b"
+  },
+  {
+   "q": "Convertir la siguiente fracción impropia en una fracción mixta:",
+   "expr": "{21/8}",
+   "options": {
+    "a": "2{5/8}",
+    "b": "1{5/6}",
+    "c": "5{2/8}",
+    "d": "2,625"
+   },
+   "ans": "a"
+  },
+  {
+   "q": "Resolver los siguientes ejercicios de suma y resta de números racionales:",
+   "expr": "{3/6} − {5/6} + {1/6} − {2/6} =",
+   "options": {
+    "a": "{2/6}",
+    "b": "{3/5}",
+    "c": "−{3/6}",
+    "d": "{3/6}"
+   },
+   "ans": "c"
+  },
+  {
+   "q": "Resolver los siguientes ejercicios de suma y resta de fracciones heterogéneas:",
+   "expr": "{3/4} + {5/8} + {3/5} =",
+   "options": {
+    "a": "{11/40}",
+    "b": "{39/40}",
+    "c": "{79/40}",
+    "d": "−{11/40}"
+   },
+   "ans": "c"
+  },
+  {
+   "q": "Multiplicar los siguientes números racionales:",
+   "expr": "(−1{7/8}) × (−{4/5}) =",
+   "options": {
+    "a": "{2/3}",
+    "b": "{1/3}",
+    "c": "−{2/3}",
+    "d": "{3/2}"
+   },
+   "ans": "d"
+  },
+  {
+   "q": "Dividir los siguientes números racionales:",
+   "expr": "(2{1/3}) ÷ (−5) =",
+   "options": {
+    "a": "−{7/15}",
+    "b": "{35/3}",
+    "c": "{10/3}",
+    "d": "{1/15}"
+   },
+   "ans": "a"
+  },
+  {
+   "q": "Resolver:",
+   "expr": "∛[−{27/125}] =",
+   "options": {
+    "a": "−{3/5}",
+    "b": "{3/5}",
+    "c": "{2/5}",
+    "d": "−{2/5}"
+   },
+   "ans": "a"
+  }
+ ],
+ "2do": [
+  {
+   "q": "Resolver los siguientes ejercicios de suma y resta de fracciones heterogéneas:",
+   "expr": "−{3/4} + {5/8} + {3/5} − {7/10} =",
+   "options": {
+    "a": "{9/40}",
+    "b": "{3/10}",
+    "c": "−{9/40}",
+    "d": "{107/40}"
+   },
+   "ans": "c"
+  },
+  {
+   "q": "Multiplicar las siguientes fracciones:",
+   "expr": "(1{5/6}) × (−{3/4}) × ({5/6}) =",
+   "options": {
+    "a": "{125/144}",
+    "b": "−1{21/144}",
+    "c": "{200/144}",
+    "d": "21{1/144}"
+   },
+   "ans": "b"
+  },
+  {
+   "q": "Resolver la siguiente división de números racionales:",
+   "expr": "(5{3/5}) ÷ (7{4/7}) =",
+   "options": {
+    "a": "{100/230}",
+    "b": "{128/210}",
+    "c": "{196/625}",
+    "d": "{196/265}"
+   },
+   "ans": "d"
+  },
+  {
+   "q": "Iván dedica {1/3} de su tiempo libre a leer, {2/7} a jugar y el resto a hacer actividades deportivas. Si tiene 21 horas libres a la semana, ¿cuántas horas dedica Iván a las actividades deportivas?",
+   "options": {
+    "a": "2 horas",
+    "b": "8 horas",
+    "c": "7 horas",
+    "d": "4 horas"
+   },
+   "ans": "b"
+  },
+  {
+   "q": "Convierte el siguiente número decimal exacto 3,625 a una fracción:",
+   "options": {
+    "a": "{5/8}",
+    "b": "{29/8}",
+    "c": "{8/29}",
+    "d": "{18/9}"
+   },
+   "ans": "b"
+  },
+  {
+   "q": "Resuelve el siguiente ejercicio con operaciones combinadas:",
+   "expr": "2({3 ⋅ 7 − 2 ⋅ 4/6}) + 3({5 ⋅ 2 − 3 ⋅ 2/15}) =",
+   "options": {
+    "a": "{77/15}",
+    "b": "{75/15}",
+    "c": "{1/2}",
+    "d": "{77/30}"
+   },
+   "ans": "a"
+  },
+  {
+   "q": "Racionalizar el denominador:",
+   "expr": "{20/√[10]} =",
+   "options": {
+    "a": "5√[10]",
+    "b": "20√[10]",
+    "c": "2√[10]",
+    "d": "√[10]"
+   },
+   "ans": "c"
+  },
+  {
+   "q": "Realizar las siguientes operaciones con radicales:",
+   "expr": "4∛[5] − 12∛[5] + 10∛[5] =",
+   "options": {
+    "a": "26∛[5]",
+    "b": "−2∛[5]",
+    "c": "∛[5]",
+    "d": "2∛[5]"
+   },
+   "ans": "d"
+  },
+  {
+   "q": "Reducir los siguientes términos semejantes:",
+   "expr": "x² + 20x² − 9x² + 13x² − 11x² =",
+   "options": {
+    "a": "14x²",
+    "b": "12x²",
+    "c": "54x²",
+    "d": "53x²"
+   },
+   "ans": "a"
+  }
+ ]
+};
+
+  // Variables de estado
+  let selectedCourse = "";
+  let selectedParallel = "";
+  let currentAnswers = {};
+  let lastEvaluationRecord = null;
+
+  function openResultsPage() {
+    let u = "";
+    try { u = localStorage.getItem("google_sheets_exec_url_ip") || ""; } catch (e) {}
+    u = (u || DEFAULT_GOOGLE_SCRIPT_URL).trim();
+    if (!u) { showBanner("adminNotice", "Primero guarda la URL de tu Google Apps Script.", "error"); return; }
+    window.open(u, "_blank");
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    try {
+      const savedUrl = localStorage.getItem("google_sheets_exec_url_ip") || DEFAULT_GOOGLE_SCRIPT_URL;
+      document.getElementById("scriptUrlInput").value = savedUrl;
+
+      // Verificar si este dispositivo ya rindió el examen (Bloqueo de 1 solo intento)
+      const lockedExam = localStorage.getItem("examen_bloqueado_ip_2026");
+      if (lockedExam) {
+        lastEvaluationRecord = JSON.parse(lockedExam);
+        renderResultsScreen(lastEvaluationRecord);
+        const notify = document.getElementById("syncNotification");
+        notify.style.display = "block";
+        notify.style.background = "#1a2b22";
+        notify.style.border = "1px solid #44594d";
+        notify.style.color = "#cfe3d7";
+        notify.textContent = "Evaluación ya registrada desde este dispositivo (" + lastEvaluationRecord.nombre + "). Para habilitar otro intento, pulsa 'Reiniciar (Con Clave)'.";
+      }
+    } catch (e) {}
+  });
+
+  function isValidKey(inputVal) {
+    if (!inputVal) return false;
+    const clean = inputVal.trim().toLowerCase();
+    return VALID_RESET_KEYS.includes(clean);
+  }
+
+  function showBanner(elementId, message, type) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    el.className = "alert-banner " + type;
+    el.textContent = message;
+  }
+
+  function hideBanner(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    el.className = "alert-banner";
+    el.textContent = "";
+  }
+
+  // Acceso con Clave al Panel Docente superior
+  function toggleAdminAuth() {
+    const panel = document.getElementById("adminPanel");
+    const authBox = document.getElementById("adminAuthBox");
+    if (!panel.classList.contains("hidden")) {
+      panel.classList.add("hidden");
+      return;
+    }
+    authBox.classList.toggle("hidden");
+    hideBanner("adminAuthNotice");
+    document.getElementById("adminPassInput").value = "";
+  }
+
+  function verifyAdminPass() {
+    const val = document.getElementById("adminPassInput").value;
+    if (isValidKey(val)) {
+      document.getElementById("adminAuthBox").classList.add("hidden");
+      document.getElementById("adminPanel").classList.remove("hidden");
+    } else {
+      showBanner("adminAuthNotice", "Clave docente incorrecta.", "error");
+    }
+  }
+
+  // Reinicio con Clave desde la Pantalla Final
+  function toggleResetPasswordBox() {
+    const box = document.getElementById("resetPasswordBox");
+    box.classList.toggle("hidden");
+    hideBanner("resetErrorBanner");
+    const input = document.getElementById("resetPassInput");
+    input.value = "";
+    if (!box.classList.contains("hidden")) {
+      input.focus();
+    }
+  }
+
+  function confirmResetWithPassword() {
+    const val = document.getElementById("resetPassInput").value;
+    if (!isValidKey(val)) {
+      showBanner("resetErrorBanner", "Clave de reinicio incorrecta. Solicita autorización al docente.", "error");
+      return;
+    }
+    executeResetExam();
+  }
+
+  function forceUnlockFromAdmin() {
+    executeResetExam();
+    showBanner("adminNotice", "Dispositivo desbloqueado y listo para un nuevo estudiante.", "success");
+  }
+
+  function executeResetExam() {
+    try {
+      localStorage.removeItem("examen_bloqueado_ip_2026");
+      localStorage.removeItem(SESION_KEY);
+    } catch (e) {}
+    clearInterval(examTimerId); clearInterval(pdfTimerId); sesionActual = null; tiempoAgotado = false;
+    lastEvaluationRecord = null;
+    currentAnswers = {};
+    document.getElementById("studentName").value = "";
+    document.getElementById("courseInput").value = "";
+    document.getElementById("resetPassInput").value = "";
+    document.getElementById("resetPasswordBox").classList.add("hidden");
+    selectCourse("", false);
+    selectParallel("");
+    hideBanner("loginErrorBox");
+    hideBanner("resetErrorBanner");
+    document.getElementById("resultScreen").classList.add("hidden");
+    document.getElementById("examScreen").classList.add("hidden");
+    document.getElementById("loginScreen").classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function saveScriptUrl() {
+    const url = document.getElementById("scriptUrlInput").value.trim();
+    try {
+      localStorage.setItem("google_sheets_exec_url_ip", url);
+    } catch (e) {}
+    showBanner("adminNotice", "URL de Google Sheets guardada correctamente en este navegador.", "success");
+  }
+
+  function copyAppsScriptCode() {
+    const code = document.getElementById("appsScriptCode").innerText;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(() => {
+        showBanner("adminNotice", "Código copiado al portapapeles. Pégalo en Extensiones > Apps Script.", "success");
+      });
+    } else {
+      showBanner("adminNotice", "Selecciona el código de abajo y cópialo con Ctrl + C.", "error");
+    }
+  }
+
+  // Interpretar texto escrito del curso (ej. "primero", "1", "1ro", "sexto", "1ro B")
+  function parseCourseFromText(val) {
+    if (!val) return "";
+    const clean = val.toLowerCase().trim();
+    if (clean.includes("1") || clean.includes("primer")) return "1ro";
+    if (clean.includes("2") || clean.includes("segund")) return "2do";
+    if (clean.includes("3") || clean.includes("tercer")) return "3ro";
+    if (clean.includes("4") || clean.includes("cuart")) return "4to";
+    if (clean.includes("5") || clean.includes("quint")) return "5to";
+    if (clean.includes("6") || clean.includes("sext")) return "6to";
+    return "";
+  }
+
+  function handleCourseText(val) {
+    const detected = parseCourseFromText(val);
+    if (detected) {
+      selectCourse(detected, false);
+    }
+    const matchPar = val.toUpperCase().trim().match(/\b([A-F])$/);
+    if (matchPar) {
+      selectParallel(matchPar[1]);
+    }
+  }
+
+  function selectCourse(courseKey, updateInput = true) {
+    selectedCourse = courseKey;
+    hideBanner("loginErrorBox");
+    document.getElementById("courseInput").classList.remove("input-error");
+    if (updateInput && courseKey) {
+      document.getElementById("courseInput").value = courseKey + " de Secundaria";
+    }
+    ["1ro", "2do"].forEach(c => {
+      const btn = document.getElementById("btnCourse-" + c);
+      if (btn) btn.classList.toggle("active-course", c === courseKey);
+    });
+  }
+
+  function selectParallel(par) {
+    selectedParallel = par;
+    hideBanner("loginErrorBox");
+    document.getElementById("parallelSelect").classList.remove("input-error");
+    document.getElementById("parallelSelect").value = par;
+    ["A", "B", "C", "D", "E", "F"].forEach(p => {
+      const btn = document.getElementById("btnPar-" + p);
+      if (btn) btn.classList.toggle("active-parallel", p === par);
+    });
+  }
+
+  function startExam() {
+    // Verificar si ya está bloqueado
+    try {
+      const lockedExam = localStorage.getItem("examen_bloqueado_ip_2026");
+      if (lockedExam) {
+        lastEvaluationRecord = JSON.parse(lockedExam);
+        renderResultsScreen(lastEvaluationRecord);
+        return;
+      }
+    } catch (e) {}
+
+    hideBanner("loginErrorBox");
+    const nameInput = document.getElementById("studentName");
+    const courseInputEl = document.getElementById("courseInput");
+    const parallelSelectEl = document.getElementById("parallelSelect");
+
+    nameInput.classList.remove("input-error");
+    courseInputEl.classList.remove("input-error");
+    parallelSelectEl.classList.remove("input-error");
+
+    const name = nameInput.value.trim();
+
+    if (!selectedCourse && courseInputEl.value.trim()) {
+      const detected = parseCourseFromText(courseInputEl.value);
+      if (detected) selectCourse(detected, false);
+    }
+
+    if (!selectedParallel && parallelSelectEl.value) {
+      selectParallel(parallelSelectEl.value);
+    }
+
+    if (!name || name.length < 3) {
+      nameInput.classList.add("input-error");
+      showBanner("loginErrorBox", "Por favor, escribe tus Nombres y Apellidos completos para comenzar.", "error");
+      nameInput.focus();
+      return;
+    }
+
+
+    if (!selectedCourse || !EXAM_DATABASE[selectedCourse]) {
+      courseInputEl.classList.add("input-error");
+      showBanner("loginErrorBox", "Por favor, selecciona tu Curso (3ro a 6to) haciendo clic en uno de los botones de curso.", "error");
+      courseInputEl.focus();
+      return;
+    }
+
+    if (!selectedParallel) {
+      parallelSelectEl.classList.add("input-error");
+      showBanner("loginErrorBox", "Por favor, selecciona tu Paralelo (A, B, C, D, E o F) antes de iniciar.", "error");
+      parallelSelectEl.focus();
+      return;
+    }
+
+    currentAnswers = {};
+    hideBanner("examWarningBox");
+    const submitBtn = document.getElementById("btnSubmitExam");
+    submitBtn.textContent = "Finalizar evaluación y enviar puntaje";
+    submitBtn.onclick = function() { submitExam(false); };
+
+    document.getElementById("headerStudentName").textContent = "" + name;
+    document.getElementById("headerCourseBadge").textContent = "Curso: " + selectedCourse + ' "' + selectedParallel + '"';
+
+    renderQuestions();
+    iniciarCuentaRegresiva();
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("resultScreen").classList.add("hidden");
+    document.getElementById("examScreen").classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderQuestions() {
+    const container = document.getElementById("questionsContainer");
+    container.innerHTML = "";
+    const questions = EXAM_DATABASE[selectedCourse];
+
+    questions.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "question-card";
+      card.id = "qcard-" + index;
+      card.style.setProperty("--i", index);
+
+      let optionsHTML = "";
+      for (const [letter, text] of Object.entries(item.options)) {
+        optionsHTML += `
+          <button type="button" class="option-btn" id="opt-${index}-${letter}" onclick="chooseOption(${index}, '${letter}')">
+            <span class="opt-letter">${letter.toUpperCase()}</span>
+            <span>${(item.optFig && item.optFig[letter]) ? '<span class="opt-fig">' + item.optFig[letter] + '</span>' : ""}${mathHTML(text)}</span>
+          </button>
+        `;
+      }
+
+      card.innerHTML = `
+        <div class="q-rail"><span>${index + 1}</span></div>
+        <div class="q-body">
+          <div class="q-title">${mathHTML(item.q)}</div>
+          ${item.expr ? '<div class="q-expr">' + mathHTML(item.expr) + '</div>' : ""}
+          ${item.fig ? '<div class="q-fig">' + item.fig + '</div>' : ""}
+          <div class="options-grid">${optionsHTML}</div>
+        </div>`;
+      container.appendChild(card);
+    });
+
+    const nav = document.getElementById("qNav");
+    nav.innerHTML = "";
+    questions.forEach((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.id = "qnav-" + i; b.textContent = i + 1;
+      b.setAttribute("aria-label", "Ir a la pregunta " + (i + 1));
+      b.onclick = () => document.getElementById("qcard-" + i).scrollIntoView({ behavior: "smooth", block: "start" });
+      nav.appendChild(b);
+    });
+    observeQuestions();
+    updateProgress();
+  }
+
+  function chooseOption(qIndex, letter) {
+    currentAnswers[qIndex] = letter;
+    guardarSesion();
+    hitos(); avanzarSiguiente(qIndex);
+    hideBanner("examWarningBox");
+    const submitBtn = document.getElementById("btnSubmitExam");
+    submitBtn.textContent = "Finalizar evaluación y enviar puntaje";
+    submitBtn.onclick = function() { submitExam(false); };
+
+    const questions = EXAM_DATABASE[selectedCourse];
+    for (const optKey of Object.keys(questions[qIndex].options)) {
+      const btn = document.getElementById("opt-" + qIndex + "-" + optKey);
+      if (btn) btn.classList.toggle("selected", optKey === letter);
+    }
+    document.getElementById("qcard-" + qIndex).classList.add("answered");
+    const nb = document.getElementById("qnav-" + qIndex); if (nb) nb.classList.add("done");
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const answeredCount = Object.keys(currentAnswers).length;
+    document.getElementById("progressCounter").textContent = answeredCount + " / " + N_PREG;
+    document.getElementById("progressBarFill").style.width = ((answeredCount / N_PREG) * 100) + "%";
+  }
+
+  function submitExam(forceSubmit) {
+    const questions = EXAM_DATABASE[selectedCourse];
+    const answeredCount = Object.keys(currentAnswers).length;
+
+    if (answeredCount < questions.length && !forceSubmit) {
+      const missing = questions.length - answeredCount;
+      showBanner(
+        "examWarningBox",
+        "Te faltan responder " + missing + " pregunta(s). Si deseas entregar así de todos modos, vuelve a pulsar el botón de abajo.",
+        "error"
+      );
+      const submitBtn = document.getElementById("btnSubmitExam");
+      submitBtn.textContent = "Confirmar Entrega con " + missing + " pregunta(s) sin responder";
+      submitBtn.onclick = function() { submitExam(true); };
+      return;
+    }
+
+    clearInterval(examTimerId);
+    try { localStorage.removeItem(SESION_KEY); } catch (e) {}
+    const studentName = document.getElementById("studentName").value.trim();
+    const now = new Date();
+    const fechaHora = now.toLocaleDateString("es-BO") + " " + now.toLocaleTimeString("es-BO");
+
+    let correctCount = 0;
+    let failedList = [];
+    let detailSummary = [];
+    let breakdownItems = [];
+
+    questions.forEach((item, idx) => {
+      const chosen = currentAnswers[idx] || null;
+      const isCorrect = chosen === item.ans;
+      if (isCorrect) {
+        correctCount++;
+      } else {
+        failedList.push("P" + (idx + 1));
+      }
+
+      detailSummary.push("P" + (idx + 1) + ":" + (chosen ? chosen.toUpperCase() : "-") + "(" + (isCorrect ? "OK" : "X") + ")");
+
+      breakdownItems.push({
+        num: idx + 1,
+        question: plain(item.q + (item.expr ? " " + item.expr : "")),
+        chosenLetter: chosen ? chosen.toUpperCase() : "SIN RESPONDER",
+        chosenText: chosen ? plain(item.options[chosen]) : "No respondió esta pregunta",
+        correctLetter: item.ans.toUpperCase(),
+        correctText: plain(item.options[item.ans]),
+        isCorrect: isCorrect,
+        points: isCorrect ? PTS : 0
+      });
+    });
+
+    const totalScore = correctCount * PTS;
+    const wrongCount = questions.length - correctCount;
+
+    lastEvaluationRecord = {
+      fechaHora: fechaHora,
+      nombre: studentName,
+      area: "Intercambio Pedagógico",
+      curso: selectedCourse,
+      paralelo: selectedParallel,
+      cursoCompleto: selectedCourse + ' "' + selectedParallel + '"',
+      puntaje: totalScore,
+      aciertosTexto: correctCount + " de " + N_PREG,
+      preguntasFalladas: failedList.length > 0 ? failedList.join(", ") : "Ninguna (" + N_PREG + "/" + N_PREG + ")",
+      detalleRespuestas: detailSummary.join(" | "),
+      breakdown: breakdownItems,
+      terminoPorTiempo: tiempoAgotado,
+      finTs: Date.now(),
+      correctCount: correctCount,
+      wrongCount: wrongCount
+    };
+
+    // Guardar en respaldo local y activar bloqueo de 1 solo intento
+    try {
+      const history = JSON.parse(localStorage.getItem("local_evaluations_backup_ip") || "[]");
+      history.push(lastEvaluationRecord);
+      localStorage.setItem("local_evaluations_backup_ip", JSON.stringify(history));
+      localStorage.setItem("examen_bloqueado_ip_2026", JSON.stringify(lastEvaluationRecord));
+    } catch (e) {}
+
+    // Mostrar resultados en pantalla
+    renderResultsScreen(lastEvaluationRecord);
+
+    // Enviar automáticamente a Google Sheets
+    sendToGoogleSheets(lastEvaluationRecord);
+  }
+
+  function renderResultsScreen(record) {
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("examScreen").classList.add("hidden");
+    document.getElementById("resultScreen").classList.remove("hidden");
+    document.getElementById("resultStudentTitle").textContent = record.nombre;
+    document.getElementById("statTimestamp").textContent = record.fechaHora;
+    iniciarEsperaPdf();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Envío en tiempo real a Google Sheets
+  async function sendToGoogleSheets(record) {
+    const notify = document.getElementById("syncNotification");
+    let savedUrl = "";
+    try {
+      savedUrl = localStorage.getItem("google_sheets_exec_url_ip") || "";
+    } catch (e) {}
+    const scriptUrl = (savedUrl || DEFAULT_GOOGLE_SCRIPT_URL).trim();
+
+    notify.style.display = "block";
+    if (!scriptUrl) {
+      notify.style.background = "#3a3012";
+      notify.style.border = "1px solid #7a6a2a";
+      notify.style.color = "#f0dc8a";
+      notify.textContent = "Nota calculada y guardada localmente.";
+      return;
+    }
+
+    notify.style.background = "#1a2b22";
+    notify.style.border = "1px solid #44594d";
+    notify.style.color = "#cfe3d7";
+    notify.textContent = "Enviando calificación en tiempo real a Google Sheets...";
+
+    try {
+      await fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(record)
+      });
+
+      notify.style.background = "#14301f";
+      notify.style.border = "1px solid #2f6a47";
+      notify.style.color = "#cfe3d7";
+      notify.textContent = "Calificación enviada a Google Sheets (" + record.nombre + " - " + record.cursoCompleto + " - " + record.fechaHora + ").";
+    } catch (err) {
+      notify.style.background = "#3a1714";
+      notify.style.border = "1px solid #7d3a34";
+      notify.style.color = "#f2b8b2";
+      notify.textContent = "Error de conexión al enviar a Google Sheets. Verifica tu internet y pulsa 'Reenviar Nota'.";
+    }
+  }
+
+  function retrySendToGoogleSheets() {
+    if (lastEvaluationRecord) {
+      sendToGoogleSheets(lastEvaluationRecord);
+    }
+  }
+
+  // Generar PDF con el puntaje, fecha/hora y detalle de aciertos y fallos
+  function generateStudentPDF() {
+    if (!lastEvaluationRecord) return;
+    if (pdfRestante() > 0) return;
+
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      window.print();
+      return;
+    }
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "letter" });
+
+    // Encabezado Institucional Oscuro/Azul Cobalto
+    doc.setFillColor(11, 61, 36);
+    doc.rect(0, 0, 216, 36, "F");
+    if (CREST_DATA) { try { const ch = 26, cw = Math.min(26, ch * CREST_RATIO); doc.addImage(CREST_DATA, "PNG", 200 - cw, 5, cw, ch); } catch (e) {} }
+
+    doc.setTextColor(255, 255, 255);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(14);
+    doc.text(NOMBRE_COLEGIO.toUpperCase(), 14, 15);
+
+    doc.setFontSize(10);
+    doc.setTextColor(214, 226, 219);
+    doc.text("EVALUACIÓN DE INTERCAMBIO PEDAGÓGICO 2026. " + lastEvaluationRecord.curso.toUpperCase() + " DE SECUNDARIA", 14, 22);
+
+    doc.setTextColor(203, 213, 225);
+    doc.setFont("helvetica", "normal");
+    doc.text("Fecha y Hora de Entrega: " + lastEvaluationRecord.fechaHora, 14, 29);
+
+    // Caja de Datos del Estudiante y Puntaje
+    doc.setFillColor(237, 243, 239);
+    doc.setDrawColor(176, 192, 182);
+    doc.roundedRect(14, 42, 188, 28, 3, 3, "FD");
+
+    doc.setTextColor(15, 23, 42);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.text("ESTUDIANTE: " + lastEvaluationRecord.nombre, 19, 51);
+    doc.text("CURSO Y PARALELO: " + lastEvaluationRecord.cursoCompleto + " de Secundaria", 19, 59);
+    doc.text("PREGUNTAS FALLADAS: " + lastEvaluationRecord.preguntasFalladas, 19, 66);
+
+    // Cuadro Destacado de Nota
+    doc.setFillColor(20, 99, 58);
+    doc.roundedRect(150, 45, 48, 22, 3, 3, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(9);
+    doc.text("PUNTAJE FINAL", 174, 51, { align: "center" });
+    doc.setFontSize(15);
+    doc.text(lastEvaluationRecord.puntaje + " / " + TOTAL + " PTS", 174, 61, { align: "center" });
+
+    // Tabla de detalle de las 15 preguntas (aciertos y fallos)
+    const tableRows = lastEvaluationRecord.breakdown.map(item => [
+      "P" + item.num,
+      item.question,
+      "(" + item.chosenLetter + ") " + item.chosenText,
+      item.isCorrect ? "CORRECTO (+" + PTS + ")" : "FALLÓ (0 pts)\nCorrecta: (" + item.correctLetter + ") " + item.correctText
+    ]);
+
+    doc.autoTable({
+      startY: 75,
+      head: [["N°", "Pregunta", "Respuesta del Estudiante", "Resultado / Corrección"]],
+      body: tableRows,
+      theme: "grid",
+      styles: { fontSize: 8.2, cellPadding: 2.5, valign: "middle" },
+      headStyles: { fillColor: [15, 77, 46], textColor: 255, fontStyle: "bold" },
+      columnStyles: {
+        0: { cellWidth: 11, halign: "center", fontStyle: "bold" },
+        1: { cellWidth: 62 },
+        2: { cellWidth: 55 },
+        3: { cellWidth: 60 }
+      },
+      didParseCell: function(data) {
+        if (data.section === "body" && data.column.index === 3) {
+          const raw = String(data.cell.raw);
+          if (raw.startsWith("CORRECTO")) {
+            data.cell.styles.textColor = [15, 110, 60];
+            data.cell.styles.fontStyle = "bold";
+          } else {
+            data.cell.styles.textColor = [165, 40, 31];
+            data.cell.styles.fontStyle = "bold";
+          }
+        }
+      }
+    });
+
+    const cleanName = lastEvaluationRecord.nombre.replace(/[^a-zA-Z0-9]/g, "_");
+    doc.save("Evaluacion_" + lastEvaluationRecord.curso + "_" + lastEvaluationRecord.paralelo + "_" + cleanName + ".pdf");
+  }
+
+  function exportLocalBackupCSV() {
+    let history = [];
+    try {
+      history = JSON.parse(localStorage.getItem("local_evaluations_backup_ip") || "[]");
+    } catch (e) {}
+    if (history.length === 0) {
+      showBanner("adminNotice", "Aún no hay evaluaciones registradas en este navegador.", "error");
+      return;
+    }
+    const rows = ["\uFEFFFECHA Y HORA,NOMBRES Y APELLIDOS,CURSO,PARALELO,PUNTAJE SOBRE 45,ACIERTOS,PREGUNTAS FALLADAS"];
+    history.forEach(r => {
+      rows.push('"' + r.fechaHora + '","' + r.nombre + '","' + r.curso + '","' + r.paralelo + '","' + r.puntaje + '","' + r.aciertosTexto + '","' + r.preguntasFalladas + '"');
+    });
+    const csv = rows.join("\r\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Respaldo_Intercambio_Pedagogico_2026.csv";
+    a.click();
+  }
+
+  // ---- Escudo, puntaje animado y navegación de preguntas ----
+  let CREST_DATA = "", CREST_RATIO = 1, qObserver;
+
+  function initCrests() {
+    document.querySelectorAll("[data-school]").forEach(n => { n.textContent = NOMBRE_COLEGIO; });
+    let local = "";
+    try { local = localStorage.getItem("escudo_local_ip") || ""; } catch (e) {}
+    const lista = [local, ESCUDO_URL, ESCUDO_RESPALDO].filter(Boolean);
+    const probar = i => {
+      if (i >= lista.length) return;
+      const pr = new Image();
+      pr.crossOrigin = "anonymous";
+      pr.onload = () => {
+        CREST_RATIO = pr.naturalWidth / pr.naturalHeight;
+        try {
+          const c = document.createElement("canvas");
+          c.width = pr.naturalWidth; c.height = pr.naturalHeight;
+          c.getContext("2d").drawImage(pr, 0, 0);
+          CREST_DATA = c.toDataURL("image/png");
+        } catch (e) {}
+        document.querySelectorAll("[data-crest]").forEach(slot => {
+          const im = new Image();
+          im.src = lista[i]; im.alt = "Escudo de la unidad educativa";
+          slot.textContent = ""; slot.classList.add("has-img"); slot.appendChild(im);
+        });
+      };
+      pr.onerror = () => probar(i + 1);
+      pr.src = lista[i];
+    };
+    probar(0);
+  }
+
+  function animateScore(total) {
+    const el = document.getElementById("finalScoreValue"), ring = document.getElementById("scoreCircle");
+    const paint = v => { el.textContent = Math.round(v); ring.style.setProperty("--p", (v / TOTAL * 100) + "%"); };
+    if (total === 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { paint(total); return; }
+    const t0 = performance.now();
+    (function step(t) {
+      const k = Math.min(1, (t - t0) / 1100);
+      paint(total * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function observeQuestions() {
+    if (qObserver) qObserver.disconnect();
+    if (!("IntersectionObserver" in window)) return;
+    qObserver = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      document.querySelectorAll("#qNav .now").forEach(n => n.classList.remove("now"));
+      const b = document.getElementById("qnav-" + e.target.id.split("-")[1]);
+      if (b) b.classList.add("now");
+    }), { rootMargin: "-30% 0px -60% 0px" });
+    document.querySelectorAll(".question-card").forEach(c => qObserver.observe(c));
+  }
+
+  function loadCrestFile(inp) {
+    const f = inp.files && inp.files[0];
+    if (!f) return;
+    if (f.type !== "image/png") { showBanner("adminNotice", "El escudo debe ser un archivo PNG.", "error"); return; }
+    const rd = new FileReader();
+    rd.onload = () => {
+      try { localStorage.setItem("escudo_local_ip", rd.result); }
+      catch (e) { showBanner("adminNotice", "La imagen es muy pesada para guardarla en este navegador. Usa un PNG de menos de 2 MB.", "error"); return; }
+      initCrests();
+      showBanner("adminNotice", "Escudo cargado en este dispositivo.", "success");
+    };
+    rd.readAsDataURL(f);
+  }
+
+  function initTilt() {
+    const bar = document.querySelector(".topbar"), fx = document.querySelector(".topbar .crest-fx");
+    if (!bar || !fx || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const clamp = v => Math.max(-1, Math.min(1, v));
+    bar.addEventListener("pointermove", e => {
+      const r = fx.getBoundingClientRect();
+      fx.style.setProperty("--ry", (clamp((e.clientX - r.left - r.width / 2) / (window.innerWidth / 2)) * 22).toFixed(1) + "deg");
+      fx.style.setProperty("--rx", (-clamp((e.clientY - r.top - r.height / 2) / 120) * 14).toFixed(1) + "deg");
+    });
+    bar.addEventListener("pointerleave", () => { fx.style.setProperty("--rx", "0deg"); fx.style.setProperty("--ry", "0deg"); });
+  }
+
+  // ---- Cronómetro de 40 minutos, sesión recuperable, nota y PDF con 10 minutos de espera ----
+  const fmtMS = ms => { const s = Math.ceil(ms / 1000); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); };
+
+  function iniciarSesion() {
+    sesionActual = { inicio: Date.now(), nombre: document.getElementById("studentName").value.trim(), curso: selectedCourse, paralelo: selectedParallel, answers: {} };
+    tiempoAgotado = false; hitosHechos = {}; avisosT = {};
+    try { localStorage.setItem(SESION_KEY, JSON.stringify(sesionActual)); } catch (e) {}
+    iniciarReloj();
+  }
+
+  function guardarSesion() {
+    if (!sesionActual) return;
+    sesionActual.answers = currentAnswers;
+    try { localStorage.setItem(SESION_KEY, JSON.stringify(sesionActual)); } catch (e) {}
+  }
+
+  function iniciarReloj() {
+    clearInterval(examTimerId);
+    const el = document.getElementById("examTimer");
+    const tick = () => {
+      const ms = sesionActual.inicio + TIEMPO_MIN * 60000 - Date.now();
+      el.textContent = fmtMS(Math.max(0, ms));
+      el.classList.toggle("low", ms <= 300000 && ms > 60000);
+      el.classList.toggle("crit", ms <= 60000);
+      avisosTiempo(ms);
+      if (ms <= 0) { clearInterval(examTimerId); tiempoAgotado = true; submitExam(true); }
+    };
+    tick();
+    if (sesionActual) examTimerId = setInterval(tick, 1000);
+  }
+
+  function reanudarSesion(s) {
+    sesionActual = s;
+    document.getElementById("studentName").value = s.nombre;
+    selectCourse(s.curso, false); selectParallel(s.paralelo);
+    currentAnswers = s.answers || {};
+    document.getElementById("headerStudentName").textContent = s.nombre;
+    document.getElementById("headerCourseBadge").textContent = "Curso: " + s.curso + ' "' + s.paralelo + '"';
+    renderQuestions();
+    Object.keys(currentAnswers).forEach(i => {
+      const L = currentAnswers[i];
+      Object.keys(EXAM_DATABASE[s.curso][i].options).forEach(k => {
+        const b = document.getElementById("opt-" + i + "-" + k); if (b) b.classList.toggle("selected", k === L);
+      });
+      document.getElementById("qcard-" + i).classList.add("answered");
+      const nb = document.getElementById("qnav-" + i); if (nb) nb.classList.add("done");
+    });
+    updateProgress();
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("resultScreen").classList.add("hidden");
+    document.getElementById("examScreen").classList.remove("hidden");
+    iniciarReloj();
+  }
+
+  function pdfRestante() {
+    const r = lastEvaluationRecord;
+    if (!r || !r.finTs) return 0;
+    return Math.max(0, r.finTs + ESPERA_PDF_MIN * 60000 - Date.now());
+  }
+
+  function iniciarEsperaPdf() {
+    clearInterval(pdfTimerId);
+    const r = lastEvaluationRecord;
+    const btn = document.getElementById("btnPdf"), nota = document.getElementById("pdfNota");
+    const val = document.getElementById("finalScoreValue"), max = document.getElementById("scoreMax");
+    const meta = document.getElementById("resultMetaInfo"), ring = document.getElementById("scoreCircle");
+    const tip = document.getElementById("pdfTip"), nivel = document.getElementById("nivel");
+    const base = "Curso: " + r.cursoCompleto + " de Secundaria.";
+    let revelada = false;
+    const pintar = () => {
+      const ms = pdfRestante();
+      if (ms > 0) {
+        val.classList.add("espera"); val.textContent = fmtMS(ms); max.textContent = "tu puntaje en";
+        ring.style.setProperty("--p", "0%"); nivel.textContent = "";
+        meta.textContent = base + " Tu evaluación fue enviada.";
+        const k = Math.floor((ESPERA_PDF_MIN * 60000 - ms) / 9000) % TIPS.length;
+        if (tip.dataset.k !== String(k)) { tip.dataset.k = k; tip.textContent = TIPS[k]; tip.classList.remove("in"); void tip.offsetWidth; tip.classList.add("in"); }
+        btn.disabled = true;
+        btn.textContent = "Reporte PDF disponible en " + fmtMS(ms);
+        nota.textContent = "Por seguridad, tu puntaje y el reporte con las respuestas se muestran " + ESPERA_PDF_MIN + " minutos después de finalizar.";
+      } else {
+        clearInterval(pdfTimerId);
+        btn.disabled = false;
+        btn.textContent = "Descargar reporte PDF";
+        nota.textContent = "Tu puntaje y tu reporte ya están disponibles.";
+        if (!revelada) {
+          revelada = true;
+          val.classList.remove("espera"); max.textContent = "de " + TOTAL + " puntos";
+          meta.textContent = base + " Nota: " + r.puntaje + " de " + TOTAL + " puntos.";
+          animateScore(r.puntaje);
+          tip.textContent = ""; mostrarNivel(r.puntaje);
+        }
+      }
+    };
+    pintar();
+    if (pdfRestante() > 0) pdfTimerId = setInterval(pintar, 1000);
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    try {
+      if (localStorage.getItem(LOCK_KEY)) return;
+      const raw = localStorage.getItem(SESION_KEY);
+      if (raw) { const s0 = JSON.parse(raw); reanudarSesion(s0); const n0 = Object.keys(s0.answers || {}).length, t0 = EXAM_DATABASE[s0.curso].length; [1, Math.ceil(t0 * .25), Math.ceil(t0 * .5), Math.ceil(t0 * .75), t0].forEach(k => { if (n0 >= k) hitosHechos[k] = 1; }); }
+    } catch (e) {}
+  });
+
+  // ---- Más dinamismo: cuenta regresiva, avisos, avance automático, atajos de teclado y nivel final ----
+  let hitosHechos = {}, avisosT = {}, toastId = null;
+  const TIPS = [
+    "Mientras esperas: la palabra fracción viene del latín fractio, que significa romper.",
+    "Dato curioso: el símbolo de la raíz cuadrada se empezó a usar en el siglo XVI.",
+    "Los ángulos de un triángulo siempre suman 180°.",
+    "El cero es el único número que no es positivo ni negativo.",
+    "Cuando se habilite tu reporte, revisa cada pregunta: ahí está lo que puedes repasar.",
+    "Respira hondo. Lo que hiciste hoy ya cuenta como práctica."
+  ];
+
+  function mathHTML(s) {
+    return String(s)
+      .replace(/\{([^{}\/]+)\/([^{}]+)\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
+      .replace(/(√|∛)\[([^\]]+)\]/g, '<span class="rad">$1<span>$2</span></span>');
+  }
+  function plain(s) {
+    return String(s)
+      .replace(/(\d)\{([^{}\/]+)\/([^{}]+)\}/g, "$1 $2/$3")
+      .replace(/\{([^{}\/]+)\/([^{}]+)\}/g, "$1/$2")
+      .replace(/(√|∛)\[([^\]]+)\]/g, "$1($2)");
+  }
+
+  function toast(msg, ms) {
+    const t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("on");
+    clearTimeout(toastId); toastId = setTimeout(() => t.classList.remove("on"), ms || 2800);
+  }
+
+  function iniciarCuentaRegresiva() {
+    const ov = document.getElementById("countdown"), num = document.getElementById("cdNum"), msg = document.getElementById("cdMsg");
+    const n0 = document.getElementById("studentName").value.trim().split(/\s+/)[0] || "";
+    const nombre = n0.charAt(0).toUpperCase() + n0.slice(1).toLowerCase();
+    msg.textContent = "Mucha suerte, " + nombre + ". Tienes " + TIEMPO_MIN + " minutos.";
+    ov.classList.remove("hidden");
+    const pasos = ["3", "2", "1", "¡Ya!"]; let i = 0;
+    const paso = () => {
+      num.textContent = pasos[i]; num.classList.remove("pop"); void num.offsetWidth; num.classList.add("pop");
+      i++;
+      if (i < pasos.length) setTimeout(paso, 800);
+      else setTimeout(() => { ov.classList.add("hidden"); iniciarSesion(); window.scrollTo({ top: 0 }); }, 700);
+    };
+    paso();
+  }
+
+  function hitos() {
+    const total = document.querySelectorAll(".question-card").length, n = Object.keys(currentAnswers).length;
+    const reglas = [[1, "Buen comienzo"], [Math.ceil(total * .25), "Primer cuarto listo"], [Math.ceil(total * .5), "Mitad del camino"],
+                    [Math.ceil(total * .75), "Último tramo, tú puedes"], [total, "Respondiste todas. Revisa con calma y envía cuando estés listo"]];
+    const r = reglas.find(x => x[0] === n);
+    if (r && !hitosHechos[n]) { hitosHechos[n] = 1; toast(r[1]); }
+  }
+
+  function avisosTiempo(ms) {
+    if (ms <= 300000 && !avisosT.cinco) { avisosT.cinco = avisosT.mitad = true; toast("Quedan 5 minutos", 3500); }
+    else if (ms <= TIEMPO_MIN * 30000 && !avisosT.mitad) { avisosT.mitad = true; toast("Vas por la mitad del tiempo", 3500); }
+  }
+
+  function avanzarSiguiente(i) {
+    const chk = document.getElementById("autoAvance");
+    if (!chk || !chk.checked) return;
+    const total = document.querySelectorAll(".question-card").length;
+    for (let k = i + 1; k < total; k++) {
+      if (currentAnswers[k] === undefined) {
+        setTimeout(() => { const c = document.getElementById("qcard-" + k); if (c) c.scrollIntoView({ behavior: "smooth", block: "center" }); }, 650);
+        return;
+      }
+    }
+  }
+
+  function mostrarNivel(puntaje) {
+    const p = puntaje / TOTAL, el = document.getElementById("nivel");
+    el.textContent = p >= .9 ? "Nivel Maestro: resultado sobresaliente"
+      : p >= .7 ? "Nivel Experto: muy buen trabajo"
+      : p >= .5 ? "Vas por buen camino: sigue practicando"
+      : "Aún hay camino por recorrer: revisa tu reporte y vuelve a intentarlo";
+    el.classList.remove("in"); void el.offsetWidth; el.classList.add("in");
+    if (p >= .7) chispas();
+  }
+
+  function chispas() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const cv = document.getElementById("fx"), ctx = cv.getContext && cv.getContext("2d");
+    if (!ctx) return;
+    cv.width = window.innerWidth; cv.height = window.innerHeight; cv.classList.add("on");
+    const cols = ["#3fae6c", "#8fd1a8", "#d3dbd6", "#ffffff", "#2c7a4d"];
+    const ps = Array.from({ length: 90 }, () => ({ x: cv.width / 2, y: cv.height * .35, vx: (Math.random() - .5) * 11, vy: -Math.random() * 9 - 2, s: Math.random() * 5 + 2, c: cols[(Math.random() * cols.length) | 0], l: 1 }));
+    const t0 = performance.now();
+    (function f(t) {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      ps.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += .28; p.l -= .011; ctx.globalAlpha = Math.max(p.l, 0); ctx.fillStyle = p.c; ctx.fillRect(p.x, p.y, p.s, p.s * .6); });
+      if (t - t0 < 1900) requestAnimationFrame(f); else { ctx.clearRect(0, 0, cv.width, cv.height); cv.classList.remove("on"); }
+    })(t0);
+  }
+
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("examScreen").classList.contains("hidden") || !document.getElementById("countdown").classList.contains("hidden")) return;
+    if (e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) return;
+    const cards = [...document.querySelectorAll(".question-card")]; if (!cards.length) return;
+    const now = document.querySelector("#qNav .now"); let cur = now ? +now.id.split("-")[1] : 0;
+    const k = e.key.toLowerCase();
+    if ("abcd".includes(k) && k.length === 1) { if (EXAM_DATABASE[selectedCourse][cur] && EXAM_DATABASE[selectedCourse][cur].options[k]) chooseOption(cur, k); }
+    else if (["arrowdown", "arrowright", "n"].includes(k)) { cur = Math.min(cards.length - 1, cur + 1); cards[cur].scrollIntoView({ behavior: "smooth", block: "center" }); e.preventDefault(); }
+    else if (["arrowup", "arrowleft", "p"].includes(k)) { cur = Math.max(0, cur - 1); cards[cur].scrollIntoView({ behavior: "smooth", block: "center" }); e.preventDefault(); }
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const chk = document.getElementById("autoAvance");
+    try { if (localStorage.getItem("avance_auto_ip") === "0") chk.checked = false; } catch (e) {}
+    chk.addEventListener("change", () => { try { localStorage.setItem("avance_auto_ip", chk.checked ? "1" : "0"); } catch (e) {} });
+  });
+
+  window.addEventListener("DOMContentLoaded", () => { initCrests(); initTilt(); });
+</script>
+</body>
+</html>
